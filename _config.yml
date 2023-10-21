@@ -16,7 +16,7 @@ aux_links:
 footer_content: "All contents' copyright on this site are reserved by HMS 2023"
 
 # color:light(default) and dark 
-color_scheme: dark
+color_scheme: light
 
 # page and post default
 # layout setting about jekyll can refer:https://jekyllrb.com/docs/configuration/front-matter-defaults/
