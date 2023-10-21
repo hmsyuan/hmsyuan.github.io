@@ -5,6 +5,7 @@ title: Diary
 nav_order: 1
 nav_exclude: false
 has_children: true #(true or false)
+has_toc: false # hide table content
 # parent:
 
 ---
