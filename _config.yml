@@ -12,7 +12,7 @@ logo: ""
 favicon_ico: ""
 
 # footer content
-markup / liquid-based content.
+# markup / liquid-based content.
 footer_content: "All contents' copyright on this site are reserved by HMS 2023"
 
 # color:light(default) and dark 
