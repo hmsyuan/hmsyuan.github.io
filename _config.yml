@@ -8,6 +8,9 @@ aux_links:
   github: https://github.com/hmsyuan/hmsyuan.github.io
   facebook: https://www.facebook.com/mingsyuan.ho/  
 
+# Makes Aux links open in a new tab. Default is false
+aux_links_new_tab: true
+
 # website's logo and favicon
 # logo: ""
 # favicon_ico: ""
