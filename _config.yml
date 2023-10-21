@@ -8,5 +8,13 @@ aux_links:
   Template Repository: https://github.com/hmsyuan/hmsyuan.github.io
 
 # website's logo and favicon
-logo: "/assets/images/logo.jpg"
+logo: ""
 favicon_ico: ""
+
+# footer content
+markup / liquid-based content.
+footer_content: "All contents' copyright on this site are reserved by HMS 2023"
+
+# color:light(default) and dark 
+color_scheme: dark
+
