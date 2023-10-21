@@ -9,9 +9,9 @@ has_children: true #(true or false)
 
 ---
 
-## 2023 Diary
-- [2023-10-22: FB 的分身]
+## Diary Aggregated 
+- [2023 Diary]
 
 
-[2023-10-22: FB 的分身]: https://blog.hmszeit.me/d_231022_01.html 
+[2023 Diary]: https://blog.hmszeit.me/articles/diary/d_2023.html 
 
