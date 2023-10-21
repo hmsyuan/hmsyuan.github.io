@@ -37,7 +37,7 @@ defaults:
 
 # Search Function
 search_enabled: true
-  search:
+search:
   # Split pages into sections that can be searched individually
   # Supports 1 - 6, default: 2
   heading_level: 2
