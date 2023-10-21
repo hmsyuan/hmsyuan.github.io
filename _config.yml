@@ -8,8 +8,8 @@ aux_links:
   Template Repository: https://github.com/hmsyuan/hmsyuan.github.io
 
 # website's logo and favicon
-logo: ""
-favicon_ico: ""
+# logo: ""
+# favicon_ico: ""
 
 # footer content
 # markup / liquid-based content.
