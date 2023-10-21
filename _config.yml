@@ -5,7 +5,8 @@ theme: just-the-docs
 url: https://hmsyuan.github.io
 
 aux_links:
-  Template Repository: https://github.com/hmsyuan/hmsyuan.github.io
+  github: https://github.com/hmsyuan/hmsyuan.github.io
+  facebook: https://www.facebook.com/mingsyuan.ho/  
 
 # website's logo and favicon
 # logo: ""
