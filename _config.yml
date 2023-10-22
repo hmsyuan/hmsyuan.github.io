@@ -1,12 +1,11 @@
-title: The Lost
+title: The Passede
 description: HMS's website
-# theme: just-the-docs
-remote_theme: just-the-docs/just-the-docs@v0.6.0
+theme: just-the-docs
 url: https://hmsyuan.github.io
 
 aux_links:
   github: https://github.com/hmsyuan/hmsyuan.github.io
-  facebook: https://www.facebook.com/mingsyuan.ho/  
+  facebook:   
 
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: true
