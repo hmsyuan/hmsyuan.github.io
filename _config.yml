@@ -1,7 +1,7 @@
 title: The Lost
 description: HMS's website
-theme: just-the-docs
-
+# theme: just-the-docs
+remote_theme: just-the-docs/just-the-docs@v0.6.0
 url: https://hmsyuan.github.io
 
 aux_links:
