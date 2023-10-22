@@ -1,6 +1,6 @@
 ---
 
-layout: page
+layout: default
 title: Diary
 nav_order: 2
 nav_exclude: false

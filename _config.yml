@@ -13,22 +13,6 @@ footer_content: "本網站內容以 CC-BY 4.0 釋出"
 
 color_scheme: light
 
-defaults:
-  -
-    scopes:
-      path: "" 
-      type: "pages"
-    values:
-      layout: "default"
-  -
-    scopes:
-      path: ""
-      type: "posts"
-    values:
-      layout: "default"
-      author: "HMS"
-
-
 search_enabled: true
 search:
   heading_level: 2
