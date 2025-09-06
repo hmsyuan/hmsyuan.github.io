@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Demo on Confidently Incorrect</title>
-    <link>http://localhost:1313/ConfidentlyIncorrect/tags/demo/</link>
+    <link>http://localhost:1313/tags/demo/</link>
     <description>Recent content in Demo on Confidently Incorrect</description>
     <generator>Hugo -- 0.149.1</generator>
     <language>en</language>
     <lastBuildDate>Fri, 05 Sep 2025 12:00:00 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/ConfidentlyIncorrect/tags/demo/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/demo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My first2 post</title>
-      <link>http://localhost:1313/ConfidentlyIncorrect/posts/123/</link>
+      <link>http://localhost:1313/posts/123/</link>
       <pubDate>Fri, 05 Sep 2025 12:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/ConfidentlyIncorrect/posts/123/</guid>
+      <guid>http://localhost:1313/posts/123/</guid>
       <description>&lt;p&gt;很奇怪的一週，命運之神似乎又在盤算什麼。&lt;/p&gt;
 &lt;p&gt;考過了 CIPM 證照，僥倖低空飛過，幸好前幾晚抱了佛腳，陸續準備了快二十小時，（中研院贊助的）550 鎂才沒有丟水裡。考完之後看了一下 reddit，發現這個考試的失敗率似乎也蠻高的，老天有保佑。話雖如此，線上課程的 1200 鎂無疑就是詐騙，內容之雜亂與無用，倒不如去找一些參考書自己看，並花個幾十鎂買題本就行。&lt;/p&gt;
 &lt;p&gt;八月中被學弟叫回清大踢校友盃。三年多前，為了緩和壓力，重新撿起踢球的習慣。如今能再以電機系友的身份回清大操場，也真是始料未及。&lt;/p&gt;
