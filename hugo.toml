@@ -25,7 +25,35 @@ title = 'Confidently Incorrect'
   minMatchCharLength = 0
   keys = ["title", "permalink", "summary", "content"]
 
+[params.homeInfoParams]
+Title = "Here are..."
+Content = """
+* **Thoughts, observations, and murmurs** about my daily life. 
 
+* It also serves as an archive of my past experiences.
+
+* Everyone is welcome.
+"""
+[params]
+  [[params.socialIcons]]
+    name  = "github"
+    title = "View Source on Github"
+    url   = "https://github.com/hmsyuan/ConfidentlyIncorrect"
+
+  [[params.socialIcons]]
+    name  = "Facebook"
+    title = "View Facebook Profile"
+    url   = "https://www.facebook.com/mingsyuan.ho/"
+
+# [[params.socialIcons]]
+#    name  = "X"
+#    title = "Share PaperMod on X/Twitter"
+#    url   = "https://x.com/intent/tweet/?text=Checkout%20Hugo%20PaperMod%20%E2%9C%A8%0AA%20fast,%20clean,%20responsive%20Hugo%20theme.&url=https://github.com/adityatelange/hugo-PaperMod&hashtags=Hugo,PaperMod"
+
+#  [[params.socialIcons]]
+#    name  = "Bluesky"
+#    title = "Bluesky :)"
+#    url   = "https://ko-fi.com/adityatelange"
 
 [menu]
   [[menu.main]]

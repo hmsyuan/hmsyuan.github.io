@@ -2,49 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/posts/hello/</loc>
+    <loc>http://localhost:1313/ConfidentlyIncorrect/categories/</loc>
+    <lastmod>2024-07-09T12:00:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/test/</loc>
-    <lastmod>2025-09-06T18:15:48+08:00</lastmod>
+    <loc>http://localhost:1313/ConfidentlyIncorrect/</loc>
+    <lastmod>2024-07-09T12:00:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2025-09-06T22:43:06+08:00</lastmod>
+    <loc>http://localhost:1313/ConfidentlyIncorrect/categories/diary/</loc>
+    <lastmod>2024-07-09T12:00:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2025-09-06T22:43:06+08:00</lastmod>
+    <loc>http://localhost:1313/ConfidentlyIncorrect/tags/guitar/</loc>
+    <lastmod>2024-07-09T12:00:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/test3/</loc>
-    <lastmod>2025-09-06T22:43:06+08:00</lastmod>
+    <loc>http://localhost:1313/ConfidentlyIncorrect/tags/ngo/</loc>
+    <lastmod>2024-07-09T12:00:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/test2/</loc>
-    <lastmod>2025-09-06T22:43:01+08:00</lastmod>
+    <loc>http://localhost:1313/ConfidentlyIncorrect/tags/nthu/</loc>
+    <lastmod>2024-07-09T12:00:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/test1/</loc>
-    <lastmod>2025-09-06T22:09:48+08:00</lastmod>
+    <loc>http://localhost:1313/ConfidentlyIncorrect/posts/</loc>
+    <lastmod>2024-07-09T12:00:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2025-09-05T12:00:00+08:00</lastmod>
+    <loc>http://localhost:1313/ConfidentlyIncorrect/tags/</loc>
+    <lastmod>2024-07-09T12:00:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/demo/</loc>
-    <lastmod>2025-09-05T12:00:00+08:00</lastmod>
+    <loc>http://localhost:1313/ConfidentlyIncorrect/posts/2024-07-09_wierd-week/</loc>
+    <lastmod>2024-07-09T12:00:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/hugo/</loc>
-    <lastmod>2025-09-05T12:00:00+08:00</lastmod>
+    <loc>http://localhost:1313/ConfidentlyIncorrect/tags/privacy/</loc>
+    <lastmod>2024-04-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/123/</loc>
-    <lastmod>2025-09-05T12:00:00+08:00</lastmod>
+    <loc>http://localhost:1313/ConfidentlyIncorrect/tags/program/</loc>
+    <lastmod>2024-04-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/wierd-week/</loc>
-    <lastmod>2025-09-05T12:00:00+08:00</lastmod>
+    <loc>http://localhost:1313/ConfidentlyIncorrect/posts/2024-04-25-notes/</loc>
+    <lastmod>2024-04-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/notes/</loc>
-    <lastmod>2025-09-05T12:00:00+08:00</lastmod>
+    <loc>http://localhost:1313/ConfidentlyIncorrect/archives/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2025-09-05T12:00:00+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/archives/</loc>
-  </url><url>
-    <loc>http://localhost:1313/search/</loc>
+    <loc>http://localhost:1313/ConfidentlyIncorrect/search/</loc>
   </url>
 </urlset>
