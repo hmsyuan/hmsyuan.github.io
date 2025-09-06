@@ -25,12 +25,12 @@ jobs:
       # ✅ Modules 需要 Go，先裝起來
       - uses: actions/setup-go@v5
         with:
-          go-version: "1.22.x"
+          go-version: "1.24.x"
 
       # ✅ 用 >= 0.146 的 Hugo（PaperMod 目前最低需求）
       - uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: "0.152.0"   # 或 0.146.0 以上皆可
+          hugo-version: "0.147.8"   # 或 0.146.0 以上皆可
           extended: true
 
       # ✅ 讓 module 依賴在 CI 上到位
