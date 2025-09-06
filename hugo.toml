@@ -1,0 +1,59 @@
+baseURL = 'https://blog.hmszeit.me/ConfidentlyIncorrect/'
+title = 'Confidently Incorrect'
+
+
+[module]
+  [[module.imports]]
+    path = "github.com/adityatelange/hugo-PaperMod"
+
+# （可選）明確宣告 taxonomy
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+# Search 需要輸出 JSON 索引
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+#（可選）Search 的 Fuse.js 參數
+[params.fuseOpts]
+  isCaseSensitive = false
+  shouldSort = true
+  location = 0
+  distance = 1000
+  threshold = 0.4
+  minMatchCharLength = 0
+  keys = ["title", "permalink", "summary", "content"]
+
+
+
+[menu]
+  [[menu.main]]
+    identifier = "archives"
+    name = "Archives"
+    url = "/archives/"
+    weight = 10
+ 
+ [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 20
+
+  [[menu.main]]
+    identifier = "categories"
+    name = "Categories"
+    url = "/categories/"
+    weight = 30
+
+  [[menu.main]]
+    identifier = "search"
+    name = "Search"
+    url = "/search/"
+    weight = 40
+
+  [[menu.main]]
+    identifier = "Test1"
+    name = "Test1"
+    url = "/posts/Test1"
+    weight = 50
