@@ -1,52 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Posts on Confidently Incorrect</title>
-    <link>http://localhost:1313/ConfidentlyIncorrect/posts/</link>
-    <description>Recent content in Posts on Confidently Incorrect</description>
+    <title>Memory on Confidently Incorrect</title>
+    <link>http://localhost:1313/ConfidentlyIncorrect/tags/memory/</link>
+    <description>Recent content in Memory on Confidently Incorrect</description>
     <generator>Hugo -- 0.149.1</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 09 Jul 2024 12:00:00 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/ConfidentlyIncorrect/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Weird Week</title>
-      <link>http://localhost:1313/ConfidentlyIncorrect/posts/2024-07-09_wierd-week/</link>
-      <pubDate>Tue, 09 Jul 2024 12:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/ConfidentlyIncorrect/posts/2024-07-09_wierd-week/</guid>
-      <description>&lt;p&gt;很奇怪的一週，命運之神似乎又在盤算什麼。&lt;/p&gt;
-&lt;p&gt;考過了 CIPM 證照，僥倖低空飛過，幸好前幾晚抱了佛腳，陸續準備了快二十小時，（中研院贊助的）550 鎂才沒有丟水裡。考完之後看了一下 reddit，發現這個考試的失敗率似乎也蠻高的，老天有保佑。話雖如此，線上課程的 1200 鎂無疑就是詐騙，內容之雜亂與無用，倒不如去找一些參考書自己看，並花個幾十鎂買題本就行。&lt;/p&gt;
-&lt;p&gt;八月中被學弟叫回清大踢校友盃。三年多前，為了緩和壓力，重新撿起踢球的習慣。如今能再以電機系友的身份回清大操場，也真是始料未及。&lt;/p&gt;
-&lt;p&gt;為此也和大學的前室友 M 重新聯繫。翻了翻 messenger的紀錄，前次和 M 聊天是 2018 年的事，再之前則是 2016，但都只有寥寥數語。而若說到見面，研究所後到底有無見過，還真是沒印象了。M 近來過的並不順遂，但我很高興他幾乎想都沒想，立刻就答應陪我回去踢球。&lt;/p&gt;
-&lt;p&gt;和 S 見面，前次見到她應是 2019 的 Rightscon，算算也五年了。我沒想過再次碰面，竟會是在撒丰安開的店裡，一進去，撒丰安就盯著我說，我是不是在哪裡見過你XD。S 說你不要去管別人想什麼，這樣沒完沒了。這當然並不容易，但我衷心感激知道那事件的輪廓，但仍願意對我這麼說的人。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>雜記</title>
-      <link>http://localhost:1313/ConfidentlyIncorrect/posts/2024-04-25-notes/</link>
-      <pubDate>Thu, 25 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/ConfidentlyIncorrect/posts/2024-04-25-notes/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;重新撿回吉他後大約一週半，壓弦的左手除了小指外都長繭了。約莫是先前上吉他課近兩個月的進度，很不錯。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;何去何從的焦慮如伏流般，希望儘快能把 IAPP 這事情了結，應該就能下一步了。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;這個網站是 github page 架設，目前遭遇的最大問題是，大約每隔一週我會需要強迫自己更新一次，否則就會忘記 git 的語法，雖然也不是不好就是了。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <title>適應</title>
-      <link>http://localhost:1313/ConfidentlyIncorrect/posts/2024-04-14-adoption/</link>
-      <pubDate>Sun, 14 Apr 2024 00:41:54 +0800</pubDate>
-      <guid>http://localhost:1313/ConfidentlyIncorrect/posts/2024-04-14-adoption/</guid>
-      <description>&lt;p&gt;社宅的活動佔據了整個週末，近乎沒有休息的兩天。&lt;/p&gt;
-&lt;p&gt;經過 E 提醒後，覺得偶爾還是會管不住自己的嘴，需更節制一些。&lt;/p&gt;
-&lt;p&gt;另外一點是，儘管我還是不時會碎念為何要參加這種計畫，真是自己找罪受；但我同時也覺得有一群認真生活的人們可以一起工作，也是挺不錯的，已經好久沒有過這種感覺了。和 E 說，刻薄如我都沒怎麼唸過社宅的夥伴，你就知道他們很不錯了。&lt;/p&gt;
-&lt;p&gt;我其實很樂意替其中一些人寫下人物誌，只是覺得這樣暴露會個資，也不是太好。都發局的算盤打得很精，它們用極低的成本，聘僱了一個很會做事的中型團隊。（但都發局也很該死，說好的活動竟然可以不認帳。）&lt;/p&gt;
-&lt;p&gt;最近在學的東西很多，包含程式、網球、吉他、足球、新語言等，又逐漸有種時間不足之感。但能把生活過好，真是再好不過的事了。再好不過的事了。&lt;/p&gt;</description>
-    </item>
+    <lastBuildDate>Tue, 05 Mar 2024 00:44:14 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/ConfidentlyIncorrect/tags/memory/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>應該是我的朋友 - ㄍ</title>
       <link>http://localhost:1313/ConfidentlyIncorrect/posts/2024-03-05-my-friend/</link>

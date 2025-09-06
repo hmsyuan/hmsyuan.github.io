@@ -55,6 +55,10 @@ Content = """
 #    title = "Bluesky :)"
 #    url   = "https://ko-fi.com/adityatelange"
 
+[pagination]
+  disableAliases = false
+  pagerSize = 5
+
 [menu]
   [[menu.main]]
     identifier = "archives"
