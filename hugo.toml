@@ -80,8 +80,8 @@ Content = """
     url = "/search/"
     weight = 40
 
-  [[menu.main]]
-    identifier = "Test1"
-    name = "Test1"
-    url = "/posts/Test1"
-    weight = 50
+ # [[menu.main]]
+ #   identifier = "Test1"
+ #   name = "Test1"
+ #   url = "/posts/Test1"
+ #   weight = 50
