@@ -57,5 +57,12 @@
       <guid>http://localhost:1313/ConfidentlyIncorrect/tags/memory/</guid>
       <description></description>
     </item>
+    <item>
+      <title>Animal</title>
+      <link>http://localhost:1313/ConfidentlyIncorrect/tags/animal/</link>
+      <pubDate>Wed, 25 Oct 2023 11:04:24 +0800</pubDate>
+      <guid>http://localhost:1313/ConfidentlyIncorrect/tags/animal/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

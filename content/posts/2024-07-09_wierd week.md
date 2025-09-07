@@ -2,7 +2,7 @@
 title = "Weird Week"
 date = "2024-07-09T12:00:00+08:00"
 draft = false
-tags = ["guitar","nthu","NGO"]
+tags = ["guitar","nthu","ngo"]
 categories = ["diary"]
 summary = ""  # 文章結論，會出現文章列表上
 # PaperMod：目錄、閱讀時間、封面、分享/留言
