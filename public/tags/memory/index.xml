@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Memory on Confidently Incorrect</title>
-    <link>http://localhost:1313/ConfidentlyIncorrect/tags/memory/</link>
+    <link>http://localhost:1313/tags/memory/</link>
     <description>Recent content in Memory on Confidently Incorrect</description>
     <generator>Hugo -- 0.149.1</generator>
     <language>en</language>
     <lastBuildDate>Tue, 05 Mar 2024 00:44:14 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/ConfidentlyIncorrect/tags/memory/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/memory/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>應該是我的朋友 - ㄍ</title>
-      <link>http://localhost:1313/ConfidentlyIncorrect/posts/2024-03-05-my-friend/</link>
+      <link>http://localhost:1313/posts/2024-03-05-my-friend/</link>
       <pubDate>Tue, 05 Mar 2024 00:44:14 +0800</pubDate>
-      <guid>http://localhost:1313/ConfidentlyIncorrect/posts/2024-03-05-my-friend/</guid>
+      <guid>http://localhost:1313/posts/2024-03-05-my-friend/</guid>
       <description>&lt;p&gt;特教生的影片讓我想起了國小的一個好朋友ㄍ。&lt;/p&gt;
 &lt;p&gt;ㄍ和另一個我們都喜歡的女生ㄌ，我們三個是一到四年級的同班同學，應該也是好朋友。&lt;/p&gt;
 &lt;p&gt;說是「應該」，因為我也不很肯定那是什麼關係。ㄍ作為某種領頭大哥，身旁總跟著一些人，平時那些人看來也像是他的朋友，但在ㄍ衝動的時刻，能勸他的同學只有ㄌ和我。&lt;/p&gt;
@@ -24,9 +24,9 @@
     </item>
     <item>
       <title>關於旅行（2）</title>
-      <link>http://localhost:1313/ConfidentlyIncorrect/posts/2024-02-13-travel-2/</link>
+      <link>http://localhost:1313/posts/2024-02-13-travel-2/</link>
       <pubDate>Tue, 13 Feb 2024 00:48:12 +0800</pubDate>
-      <guid>http://localhost:1313/ConfidentlyIncorrect/posts/2024-02-13-travel-2/</guid>
+      <guid>http://localhost:1313/posts/2024-02-13-travel-2/</guid>
       <description>&lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;我其實不知道為什麼要打這些，但想起來就記錄一下，也未嘗不好。有些事早在十年前就惦記著要寫下來，但回國後改論文，無縫接軌上班，這件事就不再有順位了。&lt;/p&gt;
@@ -62,9 +62,9 @@
     </item>
     <item>
       <title>關於旅行（1）</title>
-      <link>http://localhost:1313/ConfidentlyIncorrect/posts/2024-02-12-travel-1/</link>
+      <link>http://localhost:1313/posts/2024-02-12-travel-1/</link>
       <pubDate>Mon, 12 Feb 2024 00:48:29 +0800</pubDate>
-      <guid>http://localhost:1313/ConfidentlyIncorrect/posts/2024-02-12-travel-1/</guid>
+      <guid>http://localhost:1313/posts/2024-02-12-travel-1/</guid>
       <description>&lt;p&gt;黃大米的事件讓我想起了一些事。&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -101,9 +101,9 @@
     </item>
     <item>
       <title>921 的 24 週年</title>
-      <link>http://localhost:1313/ConfidentlyIncorrect/posts/2023-09-21-921earthquake/</link>
+      <link>http://localhost:1313/posts/2023-09-21-921earthquake/</link>
       <pubDate>Thu, 21 Sep 2023 11:05:33 +0800</pubDate>
-      <guid>http://localhost:1313/ConfidentlyIncorrect/posts/2023-09-21-921earthquake/</guid>
+      <guid>http://localhost:1313/posts/2023-09-21-921earthquake/</guid>
       <description>&lt;p&gt;921 已經 24 週年了，紀念一下。&lt;/p&gt;
 &lt;p&gt;上週和新同事（美國人）聊起這件事，他說很久以前在Washington DC遇過一次規模六左右的地震，當時在地鐵上，全車乘客以為自己遭恐攻，要完蛋了。聽了一直笑XD&lt;/p&gt;
 &lt;p&gt;我一直覺得 921 造成了中部人和其他台灣人巨大的生活斷裂，一個人若不曾有過大災難的 lived experience，永遠無法理解那樣的精神狀態。如同我也不能體會美國人直覺反應會是恐攻。&lt;/p&gt;
@@ -112,9 +112,9 @@
     </item>
     <item>
       <title>那是不公正的</title>
-      <link>http://localhost:1313/ConfidentlyIncorrect/posts/2023-08-06-unfair/</link>
+      <link>http://localhost:1313/posts/2023-08-06-unfair/</link>
       <pubDate>Sun, 06 Aug 2023 11:06:31 +0800</pubDate>
-      <guid>http://localhost:1313/ConfidentlyIncorrect/posts/2023-08-06-unfair/</guid>
+      <guid>http://localhost:1313/posts/2023-08-06-unfair/</guid>
       <description>&lt;p&gt;那些事情還在傳，而我認為那於我並不公正。&lt;/p&gt;
 &lt;p&gt;我不認為現有性平機制是公正的，至少從審查過程到審查結果，我都覺得委員們只能各自以自己的臆測、想像、及先入為主的偏見決定兩個當事人的人生，端看誰比較幸運。三年前，我概括接受了所有結果，幾乎是意料中的事，我沒有針對其中不合理處再次挑戰，因為那幾個月真的太累了，我只想儘快結束那一切。&lt;/p&gt;
 &lt;p&gt;我曾傷害過一些人，在過去十年中，有兩三段為時一年左右的時間，我在感情上處理的一蹋糊塗，而我也被一些人弄得遍體鱗傷。基於交往過程的傷害，我向一些人道歉過。但我問心無愧，從未因工作上的位置，而強迫另一個人應接受些什麼。&lt;/p&gt;

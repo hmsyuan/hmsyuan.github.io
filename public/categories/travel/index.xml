@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Travel on Confidently Incorrect</title>
-    <link>http://localhost:1313/ConfidentlyIncorrect/categories/travel/</link>
+    <link>http://localhost:1313/categories/travel/</link>
     <description>Recent content in Travel on Confidently Incorrect</description>
     <generator>Hugo -- 0.149.1</generator>
     <language>en</language>
     <lastBuildDate>Tue, 13 Feb 2024 00:48:12 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/ConfidentlyIncorrect/categories/travel/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/travel/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>關於旅行（2）</title>
-      <link>http://localhost:1313/ConfidentlyIncorrect/posts/2024-02-13-travel-2/</link>
+      <link>http://localhost:1313/posts/2024-02-13-travel-2/</link>
       <pubDate>Tue, 13 Feb 2024 00:48:12 +0800</pubDate>
-      <guid>http://localhost:1313/ConfidentlyIncorrect/posts/2024-02-13-travel-2/</guid>
+      <guid>http://localhost:1313/posts/2024-02-13-travel-2/</guid>
       <description>&lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;我其實不知道為什麼要打這些，但想起來就記錄一下，也未嘗不好。有些事早在十年前就惦記著要寫下來，但回國後改論文，無縫接軌上班，這件事就不再有順位了。&lt;/p&gt;
@@ -48,9 +48,9 @@
     </item>
     <item>
       <title>關於旅行（1）</title>
-      <link>http://localhost:1313/ConfidentlyIncorrect/posts/2024-02-12-travel-1/</link>
+      <link>http://localhost:1313/posts/2024-02-12-travel-1/</link>
       <pubDate>Mon, 12 Feb 2024 00:48:29 +0800</pubDate>
-      <guid>http://localhost:1313/ConfidentlyIncorrect/posts/2024-02-12-travel-1/</guid>
+      <guid>http://localhost:1313/posts/2024-02-12-travel-1/</guid>
       <description>&lt;p&gt;黃大米的事件讓我想起了一些事。&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;

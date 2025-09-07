@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Animal on Confidently Incorrect</title>
-    <link>http://localhost:1313/ConfidentlyIncorrect/tags/animal/</link>
+    <link>http://localhost:1313/tags/animal/</link>
     <description>Recent content in Animal on Confidently Incorrect</description>
     <generator>Hugo -- 0.149.1</generator>
     <language>en</language>
     <lastBuildDate>Wed, 25 Oct 2023 11:04:24 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/ConfidentlyIncorrect/tags/animal/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/animal/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>成就感動物</title>
-      <link>http://localhost:1313/ConfidentlyIncorrect/posts/2023-10-25-achievement-animal/</link>
+      <link>http://localhost:1313/posts/2023-10-25-achievement-animal/</link>
       <pubDate>Wed, 25 Oct 2023 11:04:24 +0800</pubDate>
-      <guid>http://localhost:1313/ConfidentlyIncorrect/posts/2023-10-25-achievement-animal/</guid>
+      <guid>http://localhost:1313/posts/2023-10-25-achievement-animal/</guid>
       <description>&lt;p&gt;美感並不主觀，但意見則是。我還是同意每個人都能瞥見時代美的某個側面，否則公認的美感將不復存在。但這樣說可能不夠精確，因為實際的問題是，有人瞥見的是完整的一面，但有人可能只能看見一個點。如何將一個點的洞見保留下來，才是讓人頭痛的事。&lt;/p&gt;
 &lt;p&gt;連著幾天作設計的感覺，對一個沒什麼資源，技能普通的設計者來說，自始就自己來雖然比較方便，但若能同時照應到眾人的需求，勢必是更有成就感的。真是被成就感驅逐的動物。&lt;/p&gt;</description>
     </item>

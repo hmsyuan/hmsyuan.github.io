@@ -2,66 +2,73 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on Confidently Incorrect</title>
-    <link>http://localhost:1313/ConfidentlyIncorrect/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on Confidently Incorrect</description>
     <generator>Hugo -- 0.149.1</generator>
     <language>en</language>
     <lastBuildDate>Tue, 09 Jul 2024 12:00:00 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/ConfidentlyIncorrect/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Guitar</title>
-      <link>http://localhost:1313/ConfidentlyIncorrect/tags/guitar/</link>
+      <link>http://localhost:1313/tags/guitar/</link>
       <pubDate>Tue, 09 Jul 2024 12:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/ConfidentlyIncorrect/tags/guitar/</guid>
+      <guid>http://localhost:1313/tags/guitar/</guid>
       <description></description>
     </item>
     <item>
-      <title>NGO</title>
-      <link>http://localhost:1313/ConfidentlyIncorrect/tags/ngo/</link>
+      <title>Ngo</title>
+      <link>http://localhost:1313/tags/ngo/</link>
       <pubDate>Tue, 09 Jul 2024 12:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/ConfidentlyIncorrect/tags/ngo/</guid>
+      <guid>http://localhost:1313/tags/ngo/</guid>
       <description></description>
     </item>
     <item>
       <title>Nthu</title>
-      <link>http://localhost:1313/ConfidentlyIncorrect/tags/nthu/</link>
+      <link>http://localhost:1313/tags/nthu/</link>
       <pubDate>Tue, 09 Jul 2024 12:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/ConfidentlyIncorrect/tags/nthu/</guid>
+      <guid>http://localhost:1313/tags/nthu/</guid>
       <description></description>
     </item>
     <item>
       <title>Privacy</title>
-      <link>http://localhost:1313/ConfidentlyIncorrect/tags/privacy/</link>
+      <link>http://localhost:1313/tags/privacy/</link>
       <pubDate>Thu, 25 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/ConfidentlyIncorrect/tags/privacy/</guid>
+      <guid>http://localhost:1313/tags/privacy/</guid>
       <description></description>
     </item>
     <item>
       <title>Program</title>
-      <link>http://localhost:1313/ConfidentlyIncorrect/tags/program/</link>
+      <link>http://localhost:1313/tags/program/</link>
       <pubDate>Thu, 25 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/ConfidentlyIncorrect/tags/program/</guid>
+      <guid>http://localhost:1313/tags/program/</guid>
       <description></description>
     </item>
     <item>
       <title>Social Housing</title>
-      <link>http://localhost:1313/ConfidentlyIncorrect/tags/social-housing/</link>
+      <link>http://localhost:1313/tags/social-housing/</link>
       <pubDate>Sun, 14 Apr 2024 00:41:54 +0800</pubDate>
-      <guid>http://localhost:1313/ConfidentlyIncorrect/tags/social-housing/</guid>
+      <guid>http://localhost:1313/tags/social-housing/</guid>
       <description></description>
     </item>
     <item>
       <title>Memory</title>
-      <link>http://localhost:1313/ConfidentlyIncorrect/tags/memory/</link>
+      <link>http://localhost:1313/tags/memory/</link>
       <pubDate>Tue, 05 Mar 2024 00:44:14 +0800</pubDate>
-      <guid>http://localhost:1313/ConfidentlyIncorrect/tags/memory/</guid>
+      <guid>http://localhost:1313/tags/memory/</guid>
       <description></description>
     </item>
     <item>
       <title>Animal</title>
-      <link>http://localhost:1313/ConfidentlyIncorrect/tags/animal/</link>
+      <link>http://localhost:1313/tags/animal/</link>
       <pubDate>Wed, 25 Oct 2023 11:04:24 +0800</pubDate>
-      <guid>http://localhost:1313/ConfidentlyIncorrect/tags/animal/</guid>
+      <guid>http://localhost:1313/tags/animal/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Soccer</title>
+      <link>http://localhost:1313/tags/soccer/</link>
+      <pubDate>Tue, 09 Mar 2021 11:59:57 +0800</pubDate>
+      <guid>http://localhost:1313/tags/soccer/</guid>
       <description></description>
     </item>
   </channel>

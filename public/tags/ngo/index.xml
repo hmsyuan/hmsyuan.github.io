@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>NGO on Confidently Incorrect</title>
-    <link>http://localhost:1313/ConfidentlyIncorrect/tags/ngo/</link>
-    <description>Recent content in NGO on Confidently Incorrect</description>
+    <title>Ngo on Confidently Incorrect</title>
+    <link>http://localhost:1313/tags/ngo/</link>
+    <description>Recent content in Ngo on Confidently Incorrect</description>
     <generator>Hugo -- 0.149.1</generator>
     <language>en</language>
     <lastBuildDate>Tue, 09 Jul 2024 12:00:00 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/ConfidentlyIncorrect/tags/ngo/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/ngo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Weird Week</title>
-      <link>http://localhost:1313/ConfidentlyIncorrect/posts/2024-07-09_wierd-week/</link>
+      <link>http://localhost:1313/posts/2024-07-09_wierd-week/</link>
       <pubDate>Tue, 09 Jul 2024 12:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/ConfidentlyIncorrect/posts/2024-07-09_wierd-week/</guid>
+      <guid>http://localhost:1313/posts/2024-07-09_wierd-week/</guid>
       <description>&lt;p&gt;很奇怪的一週，命運之神似乎又在盤算什麼。&lt;/p&gt;
 &lt;p&gt;考過了 CIPM 證照，僥倖低空飛過，幸好前幾晚抱了佛腳，陸續準備了快二十小時，（中研院贊助的）550 鎂才沒有丟水裡。考完之後看了一下 reddit，發現這個考試的失敗率似乎也蠻高的，老天有保佑。話雖如此，線上課程的 1200 鎂無疑就是詐騙，內容之雜亂與無用，倒不如去找一些參考書自己看，並花個幾十鎂買題本就行。&lt;/p&gt;
 &lt;p&gt;八月中被學弟叫回清大踢校友盃。三年多前，為了緩和壓力，重新撿起踢球的習慣。如今能再以電機系友的身份回清大操場，也真是始料未及。&lt;/p&gt;
@@ -21,9 +21,9 @@
     </item>
     <item>
       <title>那是不公正的</title>
-      <link>http://localhost:1313/ConfidentlyIncorrect/posts/2023-08-06-unfair/</link>
+      <link>http://localhost:1313/posts/2023-08-06-unfair/</link>
       <pubDate>Sun, 06 Aug 2023 11:06:31 +0800</pubDate>
-      <guid>http://localhost:1313/ConfidentlyIncorrect/posts/2023-08-06-unfair/</guid>
+      <guid>http://localhost:1313/posts/2023-08-06-unfair/</guid>
       <description>&lt;p&gt;那些事情還在傳，而我認為那於我並不公正。&lt;/p&gt;
 &lt;p&gt;我不認為現有性平機制是公正的，至少從審查過程到審查結果，我都覺得委員們只能各自以自己的臆測、想像、及先入為主的偏見決定兩個當事人的人生，端看誰比較幸運。三年前，我概括接受了所有結果，幾乎是意料中的事，我沒有針對其中不合理處再次挑戰，因為那幾個月真的太累了，我只想儘快結束那一切。&lt;/p&gt;
 &lt;p&gt;我曾傷害過一些人，在過去十年中，有兩三段為時一年左右的時間，我在感情上處理的一蹋糊塗，而我也被一些人弄得遍體鱗傷。基於交往過程的傷害，我向一些人道歉過。但我問心無愧，從未因工作上的位置，而強迫另一個人應接受些什麼。&lt;/p&gt;

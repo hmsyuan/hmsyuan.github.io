@@ -2,80 +2,98 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/ConfidentlyIncorrect/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
     <lastmod>2024-07-09T12:00:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/ConfidentlyIncorrect/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2024-07-09T12:00:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/ConfidentlyIncorrect/categories/diary/</loc>
+    <loc>http://localhost:1313/categories/diary/</loc>
     <lastmod>2024-07-09T12:00:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/ConfidentlyIncorrect/tags/guitar/</loc>
+    <loc>http://localhost:1313/tags/guitar/</loc>
     <lastmod>2024-07-09T12:00:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/ConfidentlyIncorrect/tags/ngo/</loc>
+    <loc>http://localhost:1313/tags/ngo/</loc>
     <lastmod>2024-07-09T12:00:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/ConfidentlyIncorrect/tags/nthu/</loc>
+    <loc>http://localhost:1313/tags/nthu/</loc>
     <lastmod>2024-07-09T12:00:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/ConfidentlyIncorrect/posts/</loc>
+    <loc>http://localhost:1313/posts/</loc>
     <lastmod>2024-07-09T12:00:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/ConfidentlyIncorrect/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2024-07-09T12:00:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/ConfidentlyIncorrect/posts/2024-07-09_wierd-week/</loc>
+    <loc>http://localhost:1313/posts/2024-07-09_wierd-week/</loc>
     <lastmod>2024-07-09T12:00:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/ConfidentlyIncorrect/tags/privacy/</loc>
+    <loc>http://localhost:1313/tags/privacy/</loc>
     <lastmod>2024-04-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/ConfidentlyIncorrect/tags/program/</loc>
+    <loc>http://localhost:1313/tags/program/</loc>
     <lastmod>2024-04-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/ConfidentlyIncorrect/posts/2024-04-25-notes/</loc>
+    <loc>http://localhost:1313/posts/2024-04-25-notes/</loc>
     <lastmod>2024-04-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/ConfidentlyIncorrect/tags/social-housing/</loc>
+    <loc>http://localhost:1313/tags/social-housing/</loc>
     <lastmod>2024-04-14T00:41:54+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/ConfidentlyIncorrect/posts/2024-04-14-adoption/</loc>
+    <loc>http://localhost:1313/posts/2024-04-14-adoption/</loc>
     <lastmod>2024-04-14T00:41:54+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/ConfidentlyIncorrect/tags/memory/</loc>
+    <loc>http://localhost:1313/tags/memory/</loc>
     <lastmod>2024-03-05T00:44:14+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/ConfidentlyIncorrect/posts/2024-03-05-my-friend/</loc>
+    <loc>http://localhost:1313/posts/2024-03-05-my-friend/</loc>
     <lastmod>2024-03-05T00:44:14+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/ConfidentlyIncorrect/categories/travel/</loc>
+    <loc>http://localhost:1313/categories/travel/</loc>
     <lastmod>2024-02-13T00:48:12+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/ConfidentlyIncorrect/posts/2024-02-13-travel-2/</loc>
+    <loc>http://localhost:1313/posts/2024-02-13-travel-2/</loc>
     <lastmod>2024-02-13T00:48:12+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/ConfidentlyIncorrect/posts/2024-02-12-travel-1/</loc>
+    <loc>http://localhost:1313/posts/2024-02-12-travel-1/</loc>
     <lastmod>2024-02-12T00:48:29+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/ConfidentlyIncorrect/tags/animal/</loc>
+    <loc>http://localhost:1313/tags/animal/</loc>
     <lastmod>2023-10-25T11:04:24+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/ConfidentlyIncorrect/posts/2023-10-25-achievement-animal/</loc>
+    <loc>http://localhost:1313/posts/2023-10-25-achievement-animal/</loc>
     <lastmod>2023-10-25T11:04:24+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/ConfidentlyIncorrect/posts/2023-10-20-fb-account/</loc>
+    <loc>http://localhost:1313/posts/2023-10-20-fb-account/</loc>
     <lastmod>2023-10-20T11:05:04+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/ConfidentlyIncorrect/posts/2023-09-21-921earthquake/</loc>
+    <loc>http://localhost:1313/posts/2023-09-21-921earthquake/</loc>
     <lastmod>2023-09-21T11:05:33+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/ConfidentlyIncorrect/posts/2023-08-06-unfair/</loc>
+    <loc>http://localhost:1313/posts/2023-08-06-unfair/</loc>
     <lastmod>2023-08-06T11:06:31+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/ConfidentlyIncorrect/archives/</loc>
+    <loc>http://localhost:1313/categories/thoughts/</loc>
+    <lastmod>2022-12-27T11:57:48+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/ConfidentlyIncorrect/search/</loc>
+    <loc>http://localhost:1313/posts/2022-12-27-military-reform/</loc>
+    <lastmod>2022-12-27T11:57:48+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/2022-10-19-blog-reorg/</loc>
+    <lastmod>2022-10-19T11:58:12+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/2021-06-26-guitar-practice/</loc>
+    <lastmod>2021-06-26T11:59:47+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/soccer/</loc>
+    <lastmod>2021-03-09T11:59:57+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/2021-03-09-soccer-practice/</loc>
+    <lastmod>2021-03-09T11:59:57+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/archives/</loc>
+  </url><url>
+    <loc>http://localhost:1313/search/</loc>
   </url>
 </urlset>
