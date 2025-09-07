@@ -1,4 +1,4 @@
-module github.com/hmsyuan/ConfidentlyIncorrect
+module github.com/hmsyuan/hmsyuan.github.io
 
 go 1.25.1
 
