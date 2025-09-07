@@ -5,7 +5,7 @@ draft = false
 tags = ["guitar","nthu","ngo"]
 categories = ["diary"]
 summary = ""  # 文章結論，會出現文章列表上
-# PaperMod：目錄、閱讀時間、封面、分享/留言
+slug="weird-week"
 showtoc = false
 tocopen = false
 ShowReadingTime = false #以英文字母計算
