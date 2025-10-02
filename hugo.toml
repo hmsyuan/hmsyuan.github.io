@@ -34,7 +34,10 @@ Content = """
 
 * Everyone is welcome.
 """
+
 [params]
+ShowPageNums = true
+
   [[params.socialIcons]]
     name  = "github"
     title = "View Source on Github"
@@ -54,6 +57,7 @@ Content = """
 #    name  = "Bluesky"
 #    title = "Bluesky :)"
 #    url   = "https://ko-fi.com/adityatelange"
+  
 
 [pagination]
   disableAliases = false
