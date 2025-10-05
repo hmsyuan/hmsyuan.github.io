@@ -1,7 +1,7 @@
 +++
 author = "hms"
-title = '不可觸'
-date = 2025-10-05T15:25:36+08:00
+title = '不可觸的他心'
+date = 2025-10-05T02:10:36+08:00
 draft = false
 tags = ""
 categories = ["thoughts"]
