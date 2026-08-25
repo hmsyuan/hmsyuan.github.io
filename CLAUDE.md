@@ -12,7 +12,11 @@ GitHub Actions 建置後部署到 GitHub Pages，網域 `hmszeit.me`（根目錄
 3. commit、推到 `claude/…` 分支、開 PR
 4. **使用者自己按 Merge** —— 發布權在他手上，不要代勞
 
-只有推 `main` 會觸發部署；PR 只跑建置檢查。Merge 後約 50 秒上線。
+部署有兩條路：**push 到 `main`**（merge 就是走這條），以及在 GitHub 上手動觸發
+**`workflow_dispatch`**。PR 只跑建置檢查，不會部署。Merge 後約 50 秒上線。
+
+`workflow_dispatch` 會直接部署當下 `main` 的內容，**繞過上面第 4 步的把關**。
+它是留給使用者手動重跑部署用的（例如上一次部署失敗），**你不要主動去觸發它**。
 
 這個 blog 寫的是很私人的內容。**不要替使用者判斷哪些該公開、哪句該刪**，那一關永遠留給他。
 
