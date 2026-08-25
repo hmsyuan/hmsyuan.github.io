@@ -3,6 +3,9 @@ name: Deploy Hugo site to Pages
 on:
   push:
     branches: [ "main" ]
+  # ✅ PR 也跑一次建置，但不部署 —— 讓 PR 頁面看得到綠勾／紅叉
+  pull_request:
+    branches: [ "main" ]
   workflow_dispatch:
 
 permissions:
@@ -11,8 +14,10 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
-  cancel-in-progress: false
+  # 依 ref 分組，PR 的建置不會卡住 main 的部署
+  group: "pages-${{ github.ref }}"
+  # PR 連推兩次時取消舊的那次；main 的部署絕不取消
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   build:
@@ -22,10 +27,11 @@ jobs:
         with:
           fetch-depth: 0
 
-      # ✅ Modules 需要 Go，先裝起來
+      # ✅ Modules 需要 Go，先裝起來（版本要對得上 go.mod 的 go 1.25.1，
+      #    否則 CI 會臨時再下載一次 toolchain，白花時間）
       - uses: actions/setup-go@v5
         with:
-          go-version: "1.24.x"
+          go-version: "1.25.x"
 
       # ✅ 用 >= 0.146 的 Hugo（PaperMod 目前最低需求）
       - uses: peaceiris/actions-hugo@v3
@@ -37,14 +43,19 @@ jobs:
       - name: Tidy modules
         run: hugo mod tidy
 
+      # --cleanDestinationDir：只留下這次建出來的檔案，不讓任何舊產物混進去
       - name: Build
-        run: hugo --minify
+        run: hugo --minify --cleanDestinationDir
 
-      - uses: actions/upload-pages-artifact@v3
+      - name: Upload artifact
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
 
   deploy:
+    # PR 只驗建置，不部署
+    if: github.event_name != 'pull_request'
     needs: build
     runs-on: ubuntu-latest
     environment:
