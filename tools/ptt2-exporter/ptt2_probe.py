@@ -55,7 +55,10 @@ def login_guest(bot: PyPtt.API) -> None:
     queue = bot.connect_core.get_screen_queue()
     screen = queue[-1] if queue else ""
     if not all(target in screen for target in screens.Target.MainMenu):
-        raise exceptions.LoginError()
+        raise RuntimeError(
+            "guest login did not reach the main menu; final screen:\n"
+            + sanitize(screen)
+        )
 
     if "> (" in screen:
         bot.cursor = data_type.Cursor.NEW
