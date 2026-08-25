@@ -1,0 +1,22 @@
+{{/* 中文網頁字型：內文思源黑體 Noto Sans TC、文章標題思源宋體 Noto Serif TC。
+     不想載外部字型時，把下面三行註解掉即可，CSS 會自動退回系統中文字型。 */}}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@700&display=swap">
+
+{{/* PaperMod 的深色模式靠 JS 加 .dark class。JS 停用時，主題改用自己的
+     <noscript> 區塊直接依 prefers-color-scheme 換掉 --theme / --primary /
+     --content 等變數 —— 但那段管不到 typography.css 自訂的 --read-color，
+     內文會變成深底配深字。這裡沿用主題同一個機制補上。
+
+     必須放在 <noscript> 裡：JS 正常時，使用者可能在深色系統上手動切成淺色，
+     那時 body 沒有 .dark，若用一般的 media query 就會誤判成深色。 */}}
+<noscript>
+  <style>
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --read-color: rgb(198, 198, 199);
+      }
+    }
+  </style>
+</noscript>

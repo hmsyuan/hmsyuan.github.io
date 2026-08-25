@@ -1,0 +1,12 @@
+# Hugo 建置產物。GitHub Actions 每次都從頭 build，不需要進版控；
+# 留在 repo 裡反而會讓舊檔案跟著部署上線。
+/public/
+/resources/_gen/
+.hugo_build.lock
+
+# 本機跑 `hugo mod vendor` 才會出現
+/_vendor/
+
+# 作業系統雜訊
+.DS_Store
+Thumbs.db
