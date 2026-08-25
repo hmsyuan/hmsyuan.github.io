@@ -1,0 +1,65 @@
+name: Export PTT2 board
+
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/ptt2-export.yml"
+      - "tools/ptt2-exporter/**"
+  workflow_dispatch:
+    inputs:
+      board:
+        description: "PTT2 board name"
+        required: true
+        default: "InAddition"
+        type: string
+      scope:
+        description: "Content to export"
+        required: true
+        default: "both"
+        type: choice
+        options:
+          - both
+          - posts
+          - essence
+
+permissions:
+  contents: read
+
+concurrency:
+  group: "ptt2-export-${{ github.ref }}"
+  cancel-in-progress: true
+
+jobs:
+  probe:
+    name: Probe PTT2 and InAddition
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      PTT2_ID: ${{ secrets.PTT2_ID }}
+      PTT2_PASSWORD: ${{ secrets.PTT2_PASSWORD }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: tools/ptt2-exporter/requirements.txt
+
+      - name: Install PTT2 client
+        run: python -m pip install -r tools/ptt2-exporter/requirements.txt
+
+      - name: Probe board and essence root
+        env:
+          BOARD: ${{ github.event_name == 'workflow_dispatch' && inputs.board || 'InAddition' }}
+        run: python tools/ptt2-exporter/ptt2_probe.py --board "$BOARD"
+
+      - name: Upload sanitized probe report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ptt2-probe-${{ github.run_id }}
+          path: ptt2-probe.json
+          if-no-files-found: warn
+          retention-days: 7
+
