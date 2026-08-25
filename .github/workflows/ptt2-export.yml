@@ -21,6 +21,16 @@ on:
           - both
           - posts
           - essence
+      max_posts:
+        description: "Newest regular posts (0 = all)"
+        required: true
+        default: "0"
+        type: string
+      max_essence_documents:
+        description: "Essence documents (0 = all)"
+        required: true
+        default: "0"
+        type: string
 
 permissions:
   contents: read
@@ -30,10 +40,33 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  probe:
-    name: Probe PTT2 and InAddition
+  validate:
+    name: Validate exporter
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: tools/ptt2-exporter/requirements.txt
+
+      - name: Install PTT2 client
+        run: python -m pip install -r tools/ptt2-exporter/requirements.txt
+
+      - name: Compile and run offline tests
+        run: |
+          python -m compileall -q tools/ptt2-exporter
+          python -m unittest discover -s tools/ptt2-exporter/tests -v
+
+  export:
+    name: Export PTT2 bundle
+    if: github.event_name == 'workflow_dispatch'
+    needs: validate
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
     env:
       PTT2_ID: ${{ secrets.PTT2_ID }}
       PTT2_PASSWORD: ${{ secrets.PTT2_PASSWORD }}
@@ -49,17 +82,24 @@ jobs:
       - name: Install PTT2 client
         run: python -m pip install -r tools/ptt2-exporter/requirements.txt
 
-      - name: Probe board and essence root
+      - name: Export board
         env:
-          BOARD: ${{ github.event_name == 'workflow_dispatch' && inputs.board || 'InAddition' }}
-        run: python tools/ptt2-exporter/ptt2_probe.py --board "$BOARD"
+          BOARD: ${{ inputs.board }}
+          SCOPE: ${{ inputs.scope }}
+          MAX_POSTS: ${{ inputs.max_posts }}
+          MAX_ESSENCE_DOCUMENTS: ${{ inputs.max_essence_documents }}
+        run: |
+          python tools/ptt2-exporter/ptt2_export.py \
+            --board "$BOARD" \
+            --scope "$SCOPE" \
+            --max-posts "$MAX_POSTS" \
+            --max-essence-documents "$MAX_ESSENCE_DOCUMENTS" \
+            --output ptt2-export
 
-      - name: Upload sanitized probe report
-        if: always()
+      - name: Upload Hugo-ready ZIP
         uses: actions/upload-artifact@v4
         with:
-          name: ptt2-probe-${{ github.run_id }}
-          path: ptt2-probe.json
-          if-no-files-found: warn
-          retention-days: 7
-
+          name: ptt2-${{ inputs.board }}-${{ github.run_id }}
+          path: ptt2-export.zip
+          if-no-files-found: error
+          retention-days: 30
