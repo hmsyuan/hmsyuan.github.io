@@ -171,8 +171,8 @@ def crawl_essence(
     """Walk the board's essence tree and return every readable document."""
     _api_util.goto_board(bot, board, refresh=True)
     targets = [
-        *_menu_targets(),
         connect_core.TargetUnit("無精華區", break_detect=True, refresh=False),
+        *_menu_targets(),
         connect_core.TargetUnit("任意鍵", response=" ", refresh=False),
     ]
     result = bot.connect_core.send(
@@ -181,7 +181,7 @@ def crawl_essence(
         screen_timeout=5.0,
         refresh=False,
     )
-    if result == len(MENU_WORDS):
+    if result == 0:
         return []
     if result < 0:
         raise RuntimeError("Could not enter the board's essence area")

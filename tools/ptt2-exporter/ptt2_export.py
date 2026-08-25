@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import shutil
 import sys
 import time
@@ -18,6 +19,21 @@ import PyPtt
 from essence import crawl_essence
 from hugo_export import write_essence_document, write_regular_post
 from ptt2_client import GuestCapacityError, login_with_retry
+
+
+IPV4_RE = re.compile(r"\b(?:\d{1,3}\.){3}\d{1,3}\b")
+EMAIL_RE = re.compile(r"\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b", re.IGNORECASE)
+
+
+def sanitize_error(value: str) -> str:
+    value = IPV4_RE.sub("[redacted-ip]", value)
+    return EMAIL_RE.sub("[redacted-email]", value)
+
+
+def make_paths_portable(record: dict[str, Any], bundle_root: Path) -> dict[str, Any]:
+    for key in ("hugo_path", "raw_path"):
+        record[key] = Path(record[key]).relative_to(bundle_root).as_posix()
+    return record
 
 
 def fetch_post_list(bot: PyPtt.API, board: str, max_posts: int) -> list[dict[str, Any]]:
@@ -61,17 +77,24 @@ def export_posts(
                 )
                 continue
             exported.append(
-                write_regular_post(
-                    post,
-                    board=board,
-                    content_root=content_root,
-                    raw_root=raw_root,
-                    exported_at=exported_at,
+                make_paths_portable(
+                    write_regular_post(
+                        post,
+                        board=board,
+                        content_root=content_root,
+                        raw_root=raw_root,
+                        exported_at=exported_at,
+                    ),
+                    bundle_root,
                 )
             )
         except Exception as exc:
             errors.append(
-                {"kind": "post", "index": index, "error": f"{type(exc).__name__}: {exc}"}
+                {
+                    "kind": "post",
+                    "index": index,
+                    "error": sanitize_error(f"{type(exc).__name__}: {exc}"),
+                }
             )
         time.sleep(0.05)
 
@@ -93,13 +116,16 @@ def export_essence(
     content_root = bundle_root / "content" / "posts" / "ptt2" / board / "essence"
     raw_root = bundle_root / "ptt2-archive" / board / "essence"
     return [
-        write_essence_document(
-            document,
-            board=board,
-            sequence=sequence,
-            content_root=content_root,
-            raw_root=raw_root,
-            exported_at=exported_at,
+        make_paths_portable(
+            write_essence_document(
+                document,
+                board=board,
+                sequence=sequence,
+                content_root=content_root,
+                raw_root=raw_root,
+                exported_at=exported_at,
+            ),
+            bundle_root,
         )
         for sequence, document in enumerate(documents, start=1)
     ]
