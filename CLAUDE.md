@@ -57,7 +57,7 @@ comments = true
 
 `ShowReadingTime` 與 `ShowWordCount` 保持 `false` —— PaperMod 是以英文空白斷詞計算，中文會算出離譜的數字。
 
-## 研究筆記（`content/research-notes/`）
+## ResearchNotes（`content/research-notes/`）
 
 第二個 section，跟 `content/posts/` 平行，放使用者看到、覺得值得留存的資料 ——
 摘錄、出處連結、他自己的註記。**刻意不出現在首頁的文章列表**，避免把文章洗掉。
@@ -70,12 +70,15 @@ canonicalURL = "https://example.org/原文網址"
 ShowCanonicalLink = true
 ```
 
-填了之後，標題下方的 meta 列會顯示「原文出處 example.org」並連向原文。
+填了之後，標題下方的 meta 列會顯示「Source example.org」並連向原文。
 這是 PaperMod 內建的，不必改模板；顯示文字由 `hugo.toml` 的 `CanonicalLinkText` 控制。
+
+這一區的對外文字（選單、頁面標題、說明）使用者指定用英文，網址則維持 `/research-notes/`（小寫連字號）。
+新增筆記時標題用什麼語言由使用者決定，不必強制英文。
 
 各處的行為（都實際建置驗證過）：
 
-| | 研究筆記會出現嗎 |
+| | ResearchNotes 會出現嗎 |
 |---|---|
 | 首頁文章列表 | 否 —— 這是重點 |
 | `/research-notes/` | 是，這是它的家 |

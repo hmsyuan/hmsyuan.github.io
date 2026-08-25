@@ -43,8 +43,8 @@ ShowPageNums = true
 # 等 research-notes 的則數超過 posts，首頁就會整個翻轉成只剩筆記。
 mainSections = ["posts"]
 
-# 研究筆記用 canonicalURL 標示來源時，meta 列顯示的文字
-CanonicalLinkText = "原文出處"
+# ResearchNotes 用 canonicalURL 標示來源時，meta 列顯示的文字
+CanonicalLinkText = "Source"
 
   [[params.socialIcons]]
     name  = "github"
@@ -74,7 +74,7 @@ CanonicalLinkText = "原文出處"
 [menu]
   [[menu.main]]
     identifier = "research-notes"
-    name = "研究筆記"
+    name = "ResearchNotes"
     url = "/research-notes/"
     weight = 5
 

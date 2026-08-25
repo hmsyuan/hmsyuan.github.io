@@ -1,4 +1,4 @@
 +++
-title = "研究筆記"
-description = "看到覺得值得留存的東西，收在這裡。多半是原文的摘錄與出處連結，加上一點自己的註記。"
+title = "ResearchNotes"
+description = "Things worth holding onto, kept here — mostly excerpts and links back to the source, with a note of my own."
 +++
