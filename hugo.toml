@@ -38,6 +38,14 @@ Content = """
 [params]
 ShowPageNums = true
 
+# 首頁與 Archives 只列 posts。
+# 一定要明確指定：沒設的話 Hugo 會自動挑「頁數最多的 section」，
+# 等 research-notes 的則數超過 posts，首頁就會整個翻轉成只剩筆記。
+mainSections = ["posts"]
+
+# 研究筆記用 canonicalURL 標示來源時，meta 列顯示的文字
+CanonicalLinkText = "原文出處"
+
   [[params.socialIcons]]
     name  = "github"
     title = "View Source on Github"
@@ -64,6 +72,12 @@ ShowPageNums = true
   pagerSize = 5
 
 [menu]
+  [[menu.main]]
+    identifier = "research-notes"
+    name = "研究筆記"
+    url = "/research-notes/"
+    weight = 5
+
   [[menu.main]]
     identifier = "archives"
     name = "Archives"
