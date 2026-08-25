@@ -57,6 +57,33 @@ comments = true
 
 `ShowReadingTime` 與 `ShowWordCount` 保持 `false` —— PaperMod 是以英文空白斷詞計算，中文會算出離譜的數字。
 
+## 研究筆記（`content/research-notes/`）
+
+第二個 section，跟 `content/posts/` 平行，放使用者看到、覺得值得留存的資料 ——
+摘錄、出處連結、他自己的註記。**刻意不出現在首頁的文章列表**，避免把文章洗掉。
+
+上稿方式跟文章完全一樣（開 PR、使用者按 Merge），只是檔案放進 `content/research-notes/`。
+front matter 範本在 `archetypes/research-notes.md`，比文章多一組欄位：
+
+```toml
+canonicalURL = "https://example.org/原文網址"
+ShowCanonicalLink = true
+```
+
+填了之後，標題下方的 meta 列會顯示「原文出處 example.org」並連向原文。
+這是 PaperMod 內建的，不必改模板；顯示文字由 `hugo.toml` 的 `CanonicalLinkText` 控制。
+
+各處的行為（都實際建置驗證過）：
+
+| | 研究筆記會出現嗎 |
+|---|---|
+| 首頁文章列表 | 否 —— 這是重點 |
+| `/research-notes/` | 是，這是它的家 |
+| 站內搜尋 | 是 |
+| 主 RSS `/index.xml` | 是（使用者要的） |
+| Archives | 否 |
+| Tags / Categories | 有標才會 |
+
 ## 排版
 
 `assets/css/extended/typography.css`。PaperMod 會自動把 `assets/css/extended/*.css` 接在主題 CSS 之後，
@@ -106,4 +133,7 @@ PaperMod 的深色模式靠 JS 在 `<body>` 加 `.dark` class。JS 停用時，�
   曾經有 30 個測試殘留檔（`posts/test1`、`posts/hello` 之類）就是這樣一直掛在線上
 - **不要建 `layouts/_default/list.html`**。那會整個取代 PaperMod 的列表模板，文章列表會消失。
   分頁頁碼是 `hugo.toml` 的 `ShowPageNums = true`，主題內建，不需要自己寫模板
+- **不要拿掉 `hugo.toml` 的 `mainSections = ["posts"]`**。沒有它，Hugo 會自動挑「頁數最多的
+  section」當首頁來源 —— 等 `research-notes` 的則數超過 `posts`，首頁會整個翻轉成只剩筆記、
+  文章全部消失，而且不會有任何錯誤訊息。實測過確實會發生
 - **不要直接推 `main`**
