@@ -1,0 +1,49 @@
+{{- /* 複製自 PaperMod 的 partials/post_meta.html，只在最後多了標籤區塊。
+       整份複製，升級主題時要回去比對原始檔有沒有變動。
+
+       這支 partial 有三個地方會叫到：
+         _default/single.html  文章單篇頁
+         _default/list.html    首頁與各種列表頁
+         _default/archives.html
+       標籤只要出現在「首頁」和「Archives」，所以用 Hugo 的 page 全域變數
+       （目前正在算的那一頁）跟 .（這一列代表的文章）比對來分辨脈絡：
+
+         單篇文章   page.Kind=page   .RelPermalink == page.RelPermalink → 不印
+         首頁       page.Kind=home   兩者不同                          → 印
+         Archives   page.Kind=page   兩者不同                          → 印
+         Tag 列表   page.Kind=term                                     → 不印
+         Section    page.Kind=section                                  → 不印 */ -}}
+{{- $scratch := newScratch }}
+
+{{- if not .Date.IsZero -}}
+{{- $scratch.Add "meta" (slice (printf "<span title='%s'>%s</span>" (.Date) (.Date | time.Format (default "January 2, 2006" site.Params.DateFormat)))) }}
+{{- end }}
+
+{{- if (.Param "ShowReadingTime") -}}
+{{- $scratch.Add "meta" (slice (i18n "read_time" .ReadingTime | default (printf "%d min" .ReadingTime))) }}
+{{- end }}
+
+{{- if (.Param "ShowWordCount") -}}
+{{- $scratch.Add "meta" (slice (i18n "words" .WordCount | default (printf "%d words" .WordCount))) }}
+{{- end }}
+
+{{- if not (.Param "hideAuthor") -}}
+{{- with (partial "author.html" .) }}
+{{- $scratch.Add "meta" (slice .) }}
+{{- end }}
+{{- end }}
+
+{{- with ($scratch.Get "meta") }}
+{{- delimit . "&nbsp;·&nbsp;" | safeHTML -}}
+{{- end -}}
+
+{{- /* 以下為自訂：標籤接在日期、作者同一列後面。
+       樣式在 assets/css/extended/meta-tags.css —— 那裡有一個一定要留著的
+       z-index，否則會被覆蓋整格的 .entry-link 蓋住，看得到卻點不到。 */ -}}
+{{- if and (ne .RelPermalink page.RelPermalink) (in (slice "home" "page") page.Kind) }}
+{{- with .GetTerms "tags" -}}
+<span class="meta-tags">
+  {{- range . }}<a href="{{ .Permalink }}">{{ .LinkTitle }}</a>{{ end -}}
+</span>
+{{- end }}
+{{- end -}}

@@ -6,8 +6,9 @@
 
 {{/* PaperMod 的深色模式靠 JS 加 .dark class。JS 停用時，主題改用自己的
      <noscript> 區塊直接依 prefers-color-scheme 換掉 --theme / --primary /
-     --content 等變數 —— 但那段管不到 typography.css 自訂的 --read-color，
-     內文會變成深底配深字。這裡沿用主題同一個機制補上。
+     --content 等變數 —— 但那段管不到我們自訂的變數（typography.css 的
+     --read-color、meta-tags.css 的 --tag-chip-color），會變成深底配深字。
+     這裡沿用主題同一個機制補上。
 
      必須放在 <noscript> 裡：JS 正常時，使用者可能在深色系統上手動切成淺色，
      那時 body 沒有 .dark，若用一般的 media query 就會誤判成深色。 */}}
@@ -16,6 +17,8 @@
     @media (prefers-color-scheme: dark) {
       :root {
         --read-color: rgb(198, 198, 199);
+        --tag-chip-bg: rgba(255, 255, 255, 0.09);
+        --tag-chip-color: rgb(176, 177, 179);
       }
     }
   </style>
