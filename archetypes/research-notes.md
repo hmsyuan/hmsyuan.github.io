@@ -5,6 +5,7 @@ date = {{ .Date }}
 draft = false
 canonicalURL = ""        # 原始出處網址，填了才會在標題下方顯示「Source ⋯」
 ShowCanonicalLink = true
+topics = []          # Philosophy / Tech / Literature / Politics / Health，可複選
 tags = []
 categories = []
 summary = ""   # 留白的話 Hugo 會自動取前段文字當列表摘要
