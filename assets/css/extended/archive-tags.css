@@ -1,0 +1,34 @@
+/* =============================================================
+   Archives 每篇文章底下的標籤列
+
+   刻意做得不起眼：小字、次要色，沒有 chip 底色 —— Archives 是
+   時間軸，標籤是輔助資訊，不該跟標題搶。
+   ============================================================= */
+
+.archive-tags {
+    /* PaperMod 的 .archive-entry 裡有一個絕對定位、覆蓋整格的
+       .entry-link（點哪裡都會進文章）。標籤必須疊在它上面，
+       否則點標籤會變成點進文章。 */
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px 12px;
+    margin-top: 6px;
+    font-size: 13px;
+    line-height: 1.8;
+    letter-spacing: 0.02em;
+}
+
+.archive-tags a {
+    color: var(--secondary);
+    /* 只有 hover 時才有下底線，平常安靜地待著 */
+    border-bottom: 1px solid transparent;
+    transition: color 0.12s, border-color 0.12s;
+}
+
+.archive-tags a:hover {
+    color: var(--primary);
+    border-bottom-color: var(--tertiary);
+}
