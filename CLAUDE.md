@@ -141,6 +141,8 @@ PaperMod 的深色模式靠 JS 在 `<body>` 加 `.dark` class。JS 停用時，�
 3. `extend_head.html` 的 `<noscript>` —— 無 JS 的深色值
 
 漏掉第三個就會出現深底配深字。`--read-color` 就發生過，對比一度只有 1.47:1。
+目前需要這樣顧的自訂變數有三個：`--read-color`（typography.css）、
+`--tag-chip-bg` 與 `--tag-chip-color`（meta-tags.css）。
 
 不要用一般的 `@media (prefers-color-scheme: dark)` 代替 `<noscript>`：JS 正常時，在深色系統上手動
 切成淺色的使用者同樣沒有 `.dark`，純 media query 分不出這兩種情況，會把他們的淺色頁面內文塗成淺灰。
@@ -160,26 +162,54 @@ repo 裡有兩份從 PaperMod 複製出來、加了東西的版型。兩份都�
 | 檔案 | 從哪複製 | 多了什麼 | 影響範圍 |
 |---|---|---|---|
 | `layouts/research-notes/single.html` | `_default/single.html` | 議題 chip（`.GetTerms "topics"`） | 只有筆記單篇頁 |
-| `layouts/_default/archives.html` | 同名 | 每篇文章的標籤列 | 只有 `/archives/` 那一頁 |
+| `layouts/partials/post_meta.html` | 同名 | 日期、作者後面接標籤 chip | 首頁與 Archives 的列表 |
 
-兩份都刻意選了影響範圍最小的掛法：前者掛在 section 底下，動不到文章頁；
-後者只有 `content/archives.md`（`layout: archives`）會用到。
+兩份都刻意選了影響範圍最小的掛法。
 
-**注意 `_default/archives.html` 可以覆寫，但 `_default/list.html` 不行** ——
-前者只服務 archives 那一頁，後者會取代所有列表頁（首頁、tags、categories…）。
+**首頁的文章列表不能靠覆寫模板來加東西** —— 它是 `_default/list.html` 畫的，
+而**那支不能覆寫**（會連 tags、categories 等所有列表頁一起換掉，見「不要做的事」）。
+能動的是它呼叫的 `post_meta.html` 這支 partial，順帶也服務 Archives，
+所以標籤只要寫這一份，兩個地方一起有。
 
-### Archives 標籤列的坑
+### post_meta.html 怎麼分辨自己在哪一頁
 
-PaperMod 的 `.archive-entry` 裡有一個絕對定位、覆蓋整格的 `.entry-link`（點哪裡都進文章）。
-標籤連結必須 `position: relative; z-index: 1` 疊上去，否則**看得到但點不到**，
-點下去會變成進文章。樣式在 `assets/css/extended/archive-tags.css`，那裡有註解。
+同一支 partial 被三個地方叫到：文章單篇頁（`_default/single.html`）、
+首頁與各種列表頁（`_default/list.html`）、Archives（`_default/archives.html`）。
+標籤只要出現在首頁和 Archives，所以用 Hugo 的 **`page` 全域變數**（目前正在算的那一頁）
+跟 `.`（這一列代表的文章）比對：
+
+| 脈絡 | `page.Kind` | `.` 是不是 `page` | 印標籤 |
+|---|---|---|---|
+| 文章單篇頁 | `page` | **是** | 否（底下本來就有 chip，會重複） |
+| 首頁（含 `/page/2/`） | `home` | 否 | 是 |
+| Archives | `page` | 否 | 是 |
+| Tag / Category / Topic 列表 | `term` | 否 | 否 |
+| Section 列表（`/posts/`…） | `section` | 否 | 否 |
+
+判斷式就是 `and (ne .RelPermalink page.RelPermalink) (in (slice "home" "page") page.Kind)`。
+想讓標籤也出現在 tag／section 列表頁的話，把 `page.Kind` 那半拿掉即可。
+
+### 標籤 chip 的兩個坑
+
+**一、點得到嗎**：PaperMod 的 `.post-entry` 與 `.archive-entry` 裡各有一個絕對定位、
+覆蓋整格的 `.entry-link`（點哪裡都進文章）。chip 必須 `position: relative; z-index: 1`
+疊上去，否則**看得到但點不到**，點下去會變成進文章。
+
+**二、底色不能用實色**：兩個地方的背景不一樣 —— 首頁的卡片是 `--entry`（淺色下是白的），
+Archives 整頁的 `body.list` 是 `--code-bg`（淺色下 `rgb(245,245,245)`）。
+一開始 chip 底色用 `--code-bg`，結果在 Archives 淺色模式下**整個消失**（同色）。
+現在改用半透明覆蓋（`rgba(0,0,0,0.06)` / 深色 `rgba(255,255,255,0.09)`），
+墊在什麼底上都會壓深或提亮一階。樣式與註解在 `assets/css/extended/meta-tags.css`。
+
+實測的對比（淺色／深色、有 JS／無 JS、電腦／手機共九種組合）落在 4.7:1 ～ 6.0:1。
 
 ## 不要做的事
 
 - **不要 commit `public/`**（已在 `.gitignore`）。Hugo 不會清空目的目錄，舊產物留在版控裡會被一起打包部署 ——
   曾經有 30 個測試殘留檔（`posts/test1`、`posts/hello` 之類）就是這樣一直掛在線上
 - **不要建 `layouts/_default/list.html`**。那會整個取代 PaperMod 的列表模板，文章列表會消失。
-  分頁頁碼是 `hugo.toml` 的 `ShowPageNums = true`，主題內建，不需要自己寫模板
+  分頁頁碼是 `hugo.toml` 的 `ShowPageNums = true`，主題內建，不需要自己寫模板。
+  要在首頁的每一則上加東西，改覆寫它呼叫的 partial（例如 `post_meta.html`），不要碰 `list.html`
 - **不要拿掉 `hugo.toml` 的 `mainSections = ["posts"]`**。沒有它，Hugo 會自動挑「頁數最多的
   section」當首頁來源 —— 等 `research-notes` 的則數超過 `posts`，首頁會整個翻轉成只剩筆記、
   文章全部消失，而且不會有任何錯誤訊息。實測過確實會發生

@@ -1,0 +1,56 @@
+/* =============================================================
+   文章列表上的標籤（首頁 + Archives）
+
+   接在日期、作者同一列的後面，用淡灰底的小 chip 跟前面的 meta 做出區隔。
+   刻意安靜：小字、次要色、圓角淡底、沒有邊框，不跟標題搶。
+
+   標籤由 layouts/partials/post_meta.html 印出來。
+   ============================================================= */
+
+:root {
+    /* 底色刻意用半透明覆蓋，不是實色 —— 因為這兩個地方的背景不一樣：
+         首頁    卡片 .post-entry 是 --entry（淺色下是白的）
+         Archives 整頁 body.list 是 --code-bg（淺色下是 rgb(245,245,245)）
+       用實色的話一定會在其中一邊消失（--code-bg 就正好跟 Archives 同色，
+       試過，chip 整個看不見）。半透明則是不管墊在什麼底上都壓深／提亮一階。
+
+       這兩個是自訂變數，深色值三個地方都要有：
+       這裡（淺色）、下面的 .dark、以及 extend_head.html 的 <noscript>。
+       漏掉第三個會在「停用 JS ＋ 系統深色」時變成深底配深字。 */
+    --tag-chip-bg: rgba(0, 0, 0, 0.06);
+    --tag-chip-color: rgb(100, 100, 100);
+}
+
+.dark {
+    --tag-chip-bg: rgba(255, 255, 255, 0.09);
+    --tag-chip-color: rgb(176, 177, 179);
+}
+
+.meta-tags {
+    /* PaperMod 的 .post-entry 與 .archive-entry 裡各有一個絕對定位、
+       覆蓋整格的 .entry-link（設計上是讓你點該列任何位置都進文章）。
+       標籤必須疊到它上面，否則看得到、但點下去進的是文章不是標籤頁。 */
+    position: relative;
+    z-index: 1;
+
+    margin-left: 6px;
+}
+
+.meta-tags a {
+    display: inline-block;
+    margin: 2px 0 2px 4px;
+    padding: 1px 8px;
+    border-radius: 4px;
+    background: var(--tag-chip-bg);
+    color: var(--tag-chip-color);
+    font-size: 12px;
+    line-height: 1.7;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    transition: background 0.12s, color 0.12s;
+}
+
+.meta-tags a:hover {
+    background: var(--tertiary);
+    color: var(--primary);
+}
