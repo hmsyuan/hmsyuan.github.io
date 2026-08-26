@@ -94,8 +94,8 @@ front matter 裡 `topics = ["Philosophy"]`，可複選（一則筆記可同時�
 `/topics/` 那頁是 Hugo 自動產生的詞條總覽，但**只列出已經有筆記的議題**，
 所以完整的議題入口是 `/research-notes/` 頁面上那一行，不是 `/topics/`。
 
-已知的小缺口：PaperMod 的單篇頁只渲染 `tags` 的 chip，所以從一則筆記點不回它的議題頁。
-要補的話得覆寫 section 專屬的 single.html，目前判斷不值得。
+筆記的單篇頁底下會顯示議題 chip，點得回議題頁 —— 這是靠
+`layouts/research-notes/single.html` 做的，見下面「覆寫過的主題模板」。
 
 各處的行為（都實際建置驗證過）：
 
@@ -151,6 +151,28 @@ PaperMod 的深色模式靠 JS 在 `<body>` 加 `.dark` class。JS 停用時，�
 - `go.mod` 要求 Go 1.25.1，CI 的 `setup-go` 也設 `1.25.x`。兩邊要對齊，否則每次 build 會多下載一次 toolchain
 - 本機：`hugo mod tidy && hugo server`
 - CI：`.github/workflows/hugo.yml`。push 到 `main` → build + deploy；`pull_request` → 只 build 不部署
+
+## 覆寫過的主題模板
+
+repo 裡有兩份從 PaperMod 複製出來、加了東西的版型。兩份都是**整份複製**，
+所以**升級主題時要回去比對原始檔有沒有變動**，否則會停在舊版：
+
+| 檔案 | 從哪複製 | 多了什麼 | 影響範圍 |
+|---|---|---|---|
+| `layouts/research-notes/single.html` | `_default/single.html` | 議題 chip（`.GetTerms "topics"`） | 只有筆記單篇頁 |
+| `layouts/_default/archives.html` | 同名 | 每篇文章的標籤列 | 只有 `/archives/` 那一頁 |
+
+兩份都刻意選了影響範圍最小的掛法：前者掛在 section 底下，動不到文章頁；
+後者只有 `content/archives.md`（`layout: archives`）會用到。
+
+**注意 `_default/archives.html` 可以覆寫，但 `_default/list.html` 不行** ——
+前者只服務 archives 那一頁，後者會取代所有列表頁（首頁、tags、categories…）。
+
+### Archives 標籤列的坑
+
+PaperMod 的 `.archive-entry` 裡有一個絕對定位、覆蓋整格的 `.entry-link`（點哪裡都進文章）。
+標籤連結必須 `position: relative; z-index: 1` 疊上去，否則**看得到但點不到**，
+點下去會變成進文章。樣式在 `assets/css/extended/archive-tags.css`，那裡有註解。
 
 ## 不要做的事
 
