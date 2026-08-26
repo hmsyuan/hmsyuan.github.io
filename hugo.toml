@@ -10,6 +10,9 @@ title = 'Confidently Incorrect'
 [taxonomies]
   tag = "tags"
   category = "categories"
+  # ResearchNotes 的議題分類。跟 posts 用的 tags / categories 分開，
+  # 兩套詞彙才不會混在同一個列表頁裡。
+  topic = "topics"
 
 # Search 需要輸出 JSON 索引
 [outputs]

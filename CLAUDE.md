@@ -76,6 +76,27 @@ ShowCanonicalLink = true
 這一區的對外文字（選單、頁面標題、說明）使用者指定用英文，網址則維持 `/research-notes/`（小寫連字號）。
 新增筆記時標題用什麼語言由使用者決定，不必強制英文。
 
+### 議題分類
+
+筆記用 `topics` 這個 taxonomy 分議題，**跟 posts 的 `tags` / `categories` 是分開的**，
+兩套詞彙才不會混在同一個列表頁。目前五個：
+`Philosophy`、`Tech`、`Literature`、`Politics`、`Health`。
+
+front matter 裡 `topics = ["Philosophy"]`，可複選（一則筆記可同時屬於多個議題，
+會在每個議題頁都出現）。不填就只出現在 `/research-notes/`。
+
+**新增一個議題時有兩件事要一起做**，少一件就會出問題：
+
+1. 建 `content/topics/<小寫slug>/_index.md`，裡面寫 `title = "顯示名稱"`。
+   沒有這個檔案的話，議題頁只有在「已經有筆記」時才存在 —— 空議題的連結會 404
+2. 把連結加進 `content/research-notes/_index.md` 的內文那一行
+
+`/topics/` 那頁是 Hugo 自動產生的詞條總覽，但**只列出已經有筆記的議題**，
+所以完整的議題入口是 `/research-notes/` 頁面上那一行，不是 `/topics/`。
+
+已知的小缺口：PaperMod 的單篇頁只渲染 `tags` 的 chip，所以從一則筆記點不回它的議題頁。
+要補的話得覆寫 section 專屬的 single.html，目前判斷不值得。
+
 各處的行為（都實際建置驗證過）：
 
 | | ResearchNotes 會出現嗎 |
@@ -86,6 +107,7 @@ ShowCanonicalLink = true
 | 主 RSS `/index.xml` | 是（使用者要的） |
 | Archives | 否 |
 | Tags / Categories | 有標才會 |
+| `/topics/<議題>/` | 有填 `topics` 才會 |
 
 ## 排版
 
