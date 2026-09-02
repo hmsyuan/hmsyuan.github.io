@@ -18,11 +18,11 @@
     /* 內文字級 */
     --read-font-size: 16px;
     /* 行距：中文字面滿，需要比英文大 */
-    --read-line-height: 2;
+    --read-line-height: 1.85;
     /* 字距：中文稍微鬆一點會透氣 */
     --read-letter-spacing: 0.02em;
     /* 段落之間的距離（em 是相對內文字級） */
-    --read-para-gap: 1.55em;
+    --read-para-gap: 1.5em;
 
     /* 內文顏色：比純黑柔和，長時間閱讀不刺眼 */
     --read-color: rgb(58, 58, 58);
